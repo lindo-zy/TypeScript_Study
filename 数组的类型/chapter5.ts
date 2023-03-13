@@ -14,3 +14,27 @@ interface NumberArray {
 
 let arr3: NumberArray = [1, 1, 2, 3, 5];
 console.log(arr3);
+
+
+//类数组
+function sum() {
+    let args: {
+        [index: number]: number;
+        length: number;
+        callee: Function;
+    } = arguments;
+}
+
+interface IArguments {
+    [index: number]: any;
+
+    length: number;
+    callee: Function;
+}
+
+function sum2() {
+    let args: IArguments = arguments;
+}
+
+//any数组
+let list: any[] = ['xcatliu', 25, {website: 'http://xcatliu.com'}];
